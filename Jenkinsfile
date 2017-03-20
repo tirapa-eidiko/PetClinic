@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'set'
+                echo 'This is a minimal pipeline.' 
             }
         }
     }

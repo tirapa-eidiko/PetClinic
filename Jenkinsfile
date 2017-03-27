@@ -10,12 +10,12 @@ pipeline {
             steps {
                 retry(3) {
 				echo 'Deployent mode starts '
-                    bat './flakey-deploy.bat'
+                    bat './flakey-deploy'
 					
                 }
 
                 timeout(time: 3, unit: 'MINUTES') {
-                    bat './health-check.bat'
+                    bat './health-check'
                 }
             }
         }
